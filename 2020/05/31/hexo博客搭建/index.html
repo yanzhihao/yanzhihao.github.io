@@ -1,40 +1,128 @@
-extends ./_layout.pug
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.1" type="image/png" sizes="32x32"><meta name="description" content="静态博客 —— Hexo          静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。                     搭建                           安装git、node.js         1.sudo apt-get install git，通过git –version">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客搭建">
+<meta property="og:url" content="http://yoursite.com/2020/05/31/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="静态博客 —— Hexo          静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。                     搭建                           安装git、node.js         1.sudo apt-get install git，通过git –version">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-31T05:37:32.000Z">
+<meta property="article:modified_time" content="2020-05-31T10:00:17.829Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary"><meta name="keywords" content="John Doe, Hexo"><meta name="description" content=""><title>hexo博客搭建 | Hexo</title><link ref="canonical" href="http://yoursite.com/2020/05/31/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
 
-block content
-  // Just used to judge whether it is an article page
-  div#is-post
-  div.post
-    include ./_mixins/post-header.pug
-    include ./_mixins/gallery.pug
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Hexo</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">hexo博客搭建</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-05-31</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-05-31</span></span></div></header><div class="post-body">
+        <h1 id="静态博客-——-Hexo"   >
+          <a href="#静态博客-——-Hexo" class="heading-link"><i class="fas fa-link"></i></a>静态博客 —— Hexo</h1>
+      <p>   静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。</p>
 
-    +postHeader(page)
+        <h2 id="搭建"   >
+          <a href="#搭建" class="heading-link"><i class="fas fa-link"></i></a>搭建</h2>
+      
+        <h3 id="安装git、node-js"   >
+          <a href="#安装git、node-js" class="heading-link"><i class="fas fa-link"></i></a>安装git、node.js</h3>
+      <p>  1.sudo apt-get install git，通过git –version可查看是否安装成功</p>
+<p>  2.sudo apt-get install nodejs 通过node –version可查看是否安装成功</p>
+<p>  3.sudo apt-get install npm，通过npm –version可查看是否安装成功</p>
 
-    div.post-body
-      if page.photos && page.photos.length
-        +gallery(page)
-      != page.content
+        <h3 id="安装Hexo"   >
+          <a href="#安装Hexo" class="heading-link"><i class="fas fa-link"></i></a>安装Hexo</h3>
+      <p>  npm install -g hexo-cli</p>
+<p>  安装完了以后初始化hexo init myblog，其中myblog随便起什么名字都可以</p>
+<p>  新建完成后，指定文件夹目录下有：</p>
+<pre><code>node_modules: 依赖包
+public：存放生成的页面
+scaffolds：生成文章的一些模板
+source：用来存放你的文章
+themes：主题
+_config.yml: 博客的配置文件</code></pre><p>sudo hexo g</p>
+<p>sudo hexo server</p>
+<p>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
 
-    footer.post-footer
-      if theme.post_widget.end_text.enable
-        div.post-ending.ending
-          div.ending__text= __('post.end')
+        <h3 id="Github创建"   >
+          <a href="#Github创建" class="heading-link"><i class="fas fa-link"></i></a>Github创建</h3>
+      
+        <h4 id="生成github-io仓库"   >
+          <a href="#生成github-io仓库" class="heading-link"><i class="fas fa-link"></i></a>生成github.io仓库</h4>
+      <p>首先注册并登录GitHub，创建新public仓库，仓库名称一定要是：<br>YourGitHubName.github.io（YourGitHubName是你的GitHub昵称，大小写敏感！）</p>
 
-      if (page.copyright !== false) && (theme.creative_commons.enable && theme.creative_commons.post)
-        include ./_partials/widgets/copyright.pug
+        <h4 id="生成秘钥"   >
+          <a href="#生成秘钥" class="heading-link"><i class="fas fa-link"></i></a>生成秘钥</h4>
+      <p>yourname是你github账户的名称，email是注册时候的邮箱。</p>
+<p>git config –global user.name “yourname”</p>
+<p>git config –global user.email “youremail”</p>
+<p>ssh-keygen -t rsa -C “youremail”</p>
+<p>然后在你的主目录下用命令ls -a就可以找到一个隐藏文件夹.ssh,有一个叫id_rsa.pub的文件，这个是公钥，另一个是私钥，打开它，把里面的东西复制出来。接着打开github，按照Settings–&gt;SSH and GPGkeys—&gt;NEW SSH key顺序点击添加公钥。然后将刚刚的公钥复制进去.最后可以用命令ssh -T <span class="exturl"><a class="exturl__link"   href="mailto:git@github.com" >git@github.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>查看是能连正常连接</p>
+<p>成功提示Hi yougithubname! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 
-      if theme.post_widget.tags
-        if page.tags && page.tags.length > 0
-          div.post-tags
-            each tag in page.tags.data
-              span.post-tags-item
-                span.post-tags-item__icon
-                  i(class=theme.icon.post_tags)
-                a.post-tags-item__link(href=tag.permalink)= tag.name
+        <h3 id="hexo部署到GitHub"   >
+          <a href="#hexo部署到GitHub" class="heading-link"><i class="fas fa-link"></i></a>hexo部署到GitHub</h3>
+      
+        <h4 id="本地安装Hexo的git部署插件"   >
+          <a href="#本地安装Hexo的git部署插件" class="heading-link"><i class="fas fa-link"></i></a>本地安装Hexo的git部署插件</h4>
+      <p>在Hexo的目录下，输入npm install –save hexo-deployer-git</p>
 
-      if theme.post_widget.share.enable
-        include ./_partials/widgets/share.pug
+        <h4 id="本地修改-config-yaml文件"   >
+          <a href="#本地修改-config-yaml文件" class="heading-link"><i class="fas fa-link"></i></a>本地修改_config.yaml文件</h4>
+      <p>在Hexo目录下，找到_config.yaml文件，在#Deployment做如下修改：</p>
 
-      if (page.reward !== false) && theme.reward.enable
-        include ./_partials/widgets/reward.pug
+        <h1 id="Deployment"   >
+          <a href="#Deployment" class="heading-link"><i class="fas fa-link"></i></a>Deployment</h1>
+      
+        <h2 id="Docs-https-hexo-io-docs-deployment-html"   >
+          <a href="#Docs-https-hexo-io-docs-deployment-html" class="heading-link"><i class="fas fa-link"></i></a>Docs: https://hexo.io/docs/deployment.html</h2>
+      <p>deploy:<br>  type: git<br>  repo: <span class="exturl"><a class="exturl__link"   href="https://github.com/yanzhihao/yanzhihao.github.io.git"  target="_blank" rel="noopener">https://github.com/yanzhihao/yanzhihao.github.io.git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>       #你的github.io的网址<br>  branch: master                                                            </p>
+<p>  #”type”:”、”repo:”和”branch:”后都要带一个空格</p>
 
-      include ./_partials/widgets/paginator.pug
+        <h4 id="部署"   >
+          <a href="#部署" class="heading-link"><i class="fas fa-link"></i></a>部署</h4>
+      <p>hexo d<br>部署成功后，浏览器输入YourGitHubName.github.io即可访问，其中YourGitHubName是你的GitHub昵称，且大小写敏感</p>
+
+        <h3 id="hexo常用命令"   >
+          <a href="#hexo常用命令" class="heading-link"><i class="fas fa-link"></i></a>hexo常用命令</h3>
+      <p>创建页面：hexo new post “文章名字（可以是中文）”</p>
+<p>生成html ： hexo generate（或者hexo g）</p>
+<p>发布到git： hexo deploy</p>
+<p>生成并发布：hexo generate -d （或者hexo g -d）</p>
+
+        <h2 id="踩坑"   >
+          <a href="#踩坑" class="heading-link"><i class="fas fa-link"></i></a>踩坑</h2>
+      <p> 初始化hexo目录时，遇到如下报错：<br> INFO  Cloning hexo-starter <span class="exturl"><a class="exturl__link"   href="https://github.com/hexojs/hexo-starter.git"  target="_blank" rel="noopener">https://github.com/hexojs/hexo-starter.git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>Cloning into ‘/root/myblog’…<br>/usr/lib/git-core/git-remote-https: symbol lookup error: /usr/lib/x86_64-linux-gnu/libhogweed.so.4: undefined symbol: __gmpn_cnd_add_n<br>WARN  git clone failed. Copying data instead<br>WARN  Failed to install dependencies. Please run ‘npm install’ manually!</p>
+<p>执行命令 rm /usr/local/lib/libgmp.so* 可解决</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://yoursite.com">John Doe</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://yoursite.com/2020/05/31/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://yoursite.com/2020/05/31/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/05/31/hello-world/"><span class="paginator-prev__text">Hello World</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#静态博客-——-Hexo"><span class="toc-number">1.</span> <span class="toc-text">
+          静态博客 —— Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建"><span class="toc-number">1.1.</span> <span class="toc-text">
+          搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装git、node-js"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          安装git、node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo"><span class="toc-number">1.1.2.</span> <span class="toc-text">
+          安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github创建"><span class="toc-number">1.1.3.</span> <span class="toc-text">
+          Github创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成github-io仓库"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">
+          生成github.io仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成秘钥"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">
+          生成秘钥</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo部署到GitHub"><span class="toc-number">1.1.4.</span> <span class="toc-text">
+          hexo部署到GitHub</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#本地安装Hexo的git部署插件"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">
+          本地安装Hexo的git部署插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地修改-config-yaml文件"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">
+          本地修改_config.yaml文件</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Deployment"><span class="toc-number">2.</span> <span class="toc-text">
+          Deployment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docs-https-hexo-io-docs-deployment-html"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#部署"><span class="toc-number">2.1.0.1.</span> <span class="toc-text">
+          部署</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo常用命令"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          hexo常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#踩坑"><span class="toc-number">2.2.</span> <span class="toc-text">
+          踩坑</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>John Doe</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v4.2.1</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script></body></html>
